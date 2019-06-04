@@ -1,0 +1,49 @@
+page{
+width: 100%;
+height: 100%;
+background-image: url(http://pr37lb7al.bkt.clouddn.com/task-bg.png);
+background-repeat:repeat;
+background-size:100% 100%;
+-moz-background-size:100% 100%;
+font-size: 32rpx;
+}
+.top{
+width: 45%;
+height: 120rpx;
+margin: auto;
+margin-top:50rpx;
+text-align: center;
+}
+
+.top .text{
+width: 100%;
+height: 100%;
+color: #fff;
+margin:auto;
+position: absolute;
+top: 125rpx;
+left: 0rpx;
+font-size: 28rpx;
+}
+.con{
+width: 85%;
+height: 70%;
+text-align: center;
+background-image: url(http://pr37lb7al.bkt.clouddn.com/text_bg.png);
+background-repeat:no-repeat;
+background-size:100% 100%;
+-moz-background-size:100% 100%;
+margin: auto ;
+margin-top:30rpx;
+padding-top: 20rpx;
+}
+.bot{
+width: 40%;
+height: 50rpx;
+background-color: #09bb07;
+margin: auto;
+margin-top:20rpx ;
+color: #fff;
+border-radius: 30rpx;
+line-height: 50rpx;
+}

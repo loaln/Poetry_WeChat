@@ -1,0 +1,189 @@
+/* miniprogram/pages/mine/mine.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #eef9ea;
+}
+
+.page__bd {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+}
+
+.page__bd__user-bg {
+  width: 100%;
+  height: 27%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/mine-user-bg.png');
+}
+
+.page__bd__user-bg .page__bd__user-bg__img {
+  width: 120rpx;
+  height: 120rpx;
+  border: 8rpx solid white;
+  border-radius: 120rpx;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 0 15rpx 5rpx rgb(197, 197, 197);
+  margin-left: 4%;
+  margin-top: 20%;
+  float: left;
+}
+
+.page__bd__user-bg .page__bd__user-bg__name {
+  float: left;
+  margin-left: 3%;
+  margin-top: 28%;
+  color: #363636;
+}
+
+.page__bd__user-note {
+  width: 85%;
+  height: 265rpx;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/mine-note-bg.png');
+}
+
+.delete {
+  width: 38rpx;
+  height: 38rpx;
+  float: right;
+  margin-right: 8%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/delete.png');
+}
+
+.page__bd__user-recite {
+  width: 85%;
+  height: 215rpx;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/mine-recite-bg.png');
+}
+
+.page__bd__user-favor {
+  width: 85%;
+  height: 215rpx;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/mine-favor-bg.png');
+}
+
+.page__bd__user-task {
+  width: 100%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  padding-left: 60rpx;
+  background-color: white;
+  display: flex;
+  /* justify-content: center; 水平居中*/
+  align-items: center;    /* 垂直居中 */
+}
+
+.page__bd__user-task__left {
+  width: 60rpx;
+  height: 60rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('https://706f-poetry-d7007d-1259167935.tcb.qcloud.la/mine/mine-task-icon.png?sign=234f709b93b6c0e736478ee57e8acbbf&t=1558792968');
+}
+
+.page__bd__user-task__middle {
+  font-size: 36rpx;
+  color: green;
+  margin-left: 40rpx;
+}
+
+.page__bd__user-task__right {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 380rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-image: url('https://706f-poetry-d7007d-1259167935.tcb.qcloud.la/mine/mine-task-green.png?sign=86fe082d39e5084e0e773d5971b13203&t=1558793810');
+}
+
+.bgOrange{
+  background-image: url('https://706f-poetry-d7007d-1259167935.tcb.qcloud.la/mine/mine-task-orange.png?sign=73e886fb9ab092df40acea28d84fdb2f&t=1558793990');
+}
+
+.bgBlack{
+  background-image: url('https://706f-poetry-d7007d-1259167935.tcb.qcloud.la/mine/mine-task-black.png?sign=502f6f463ad11019fb0da91528c0e874&t=1558794219');
+}
+
+.userNote-data {
+  margin-left: 18%;
+  margin-top: 6%;
+  font-size: 24rpx;
+}
+
+.userNote-title {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 32rpx;
+  margin-top: 1%;
+}
+
+.userNote-content {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24rpx;
+  margin-top: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.weui-tab {
+  height: 73%;
+}
+
+.weui-tab__panel {
+  width: 100%;
+}
+
+.weui-navbar {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  border: 0;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/mine-tab-bg.png');
+}
+
+.weui-tab__content {
+  padding-top: 40rpx;
+  flex-direction: column;
+  display: flex;
+}
+
+.weui-tab__content image {
+  width: 100%;
+  height: 250rpx;
+}
+
+.weui-navbar__slider {
+  width: 25%;
+  background-color: #7ccd7c;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #7ccd7c;
+}

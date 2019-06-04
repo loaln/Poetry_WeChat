@@ -1,0 +1,78 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <!-- user_bg -->
+    <view class='page__bd__user-bg'>
+      <view class='top'>
+        <button class="{{voi==false ? 'content_but_voice' : 'content_but_voice1'}}" bindtap="voiceClick"></button>
+        <button class="{{rec==false ? 'content_but_rec' : 'content_but_rec1'}}" bindtap="recClick"></button>
+        <button class="{{col==false ? 'content_but_col' : 'content_but_col1'}}" bindtap="colClick"></button>
+      </view>
+      <view class='left'>
+        <image src='http://pr37lb7al.bkt.clouddn.com/poetry-img.png' width=""></image>
+      </view>
+      <view class='right'>
+        <view>作品：《{{poetry.title}}》</view>
+        <view>作者：{{poetry.writer}}</view>
+        <view>朝代：{{poetry.dynasty}}</view>
+        <view>标签：{{poetry.tag}}</view>
+      </view>
+    </view>
+    <!-- user_content -->
+    <view class="content-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="navbar__title">{{item}}</view>
+          </view>
+        </block>
+      </view>
+      <view class="tab__panel">
+        <!-- 正文 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <!-- 诗名 -->
+          <view class='poe'>
+            {{poetry.title}}
+          </view>
+          <!-- 诗人 -->
+          <view class='name'>
+            [{{poetry.dynasty}}]
+            <text decode="{{true}}">&nbsp;</text>{{poetry.writer}}
+          </view>
+          <!-- 诗正文 -->
+          <view class='main' style="word-break: break-all">
+            <text decode="{{true}}">{{poetryContent}}</text>
+          </view>
+          <view class='mainNote'>
+            <text decode="{{true}}">{{poetryNotes}}</text>
+          </view>
+        </view>
+
+        <!-- 译文 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='exp'>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> {{poetryTranslate}}
+          </view>
+        </view>
+
+        <!--赏析 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class='exp'>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> {{poetryAppreciation}}
+          </view>
+        </view>
+
+        <!-- 作者 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view class='exp'>
+            <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> {{poetryWriter}}
+          </view>
+        </view>
+      </view>
+      <view class="tab__pane2">
+        <button class='check' bindtap="pageToNoteDetail" data-state='{{state}}'></button>
+        <button class='add' bindtap="pageToNoteDetail" data-state='{{!state}}'></button>
+      </view>
+    </view>
+  </view>
+</view>

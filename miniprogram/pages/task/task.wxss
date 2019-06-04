@@ -1,0 +1,106 @@
+/* miniprogram/pages/task/task.wxss */
+/* page{
+  width: 540rpx;
+  height: 1080rpx;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  background-image: url("");
+} */
+page{
+  width: 100%;
+  height: 1080rpx;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/task-bg.png);
+  padding-top: 30rpx;
+  background-repeat:repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  font-size: 32rpx;
+}
+/*
+*活动图片
+*/
+.box_img{
+  width: 80%;
+  height: 300rpx;
+  margin-bottom: 0rpx;
+  margin-left: 10%;
+}
+.box_img image{
+    width: 100%;
+  height: 100%;
+}
+/*
+*
+*/
+.box_content{
+  width: 80%;
+  height: 80rpx;
+  margin-bottom: 35rpx;
+  margin-left: 10%;
+  background-color: #fff;
+}
+/*
+*活动时间
+*/
+.box_content_text{
+  width: 60%;
+  height: 100%;
+  font-size: 24rpx;
+  text-align: center;
+  float: left;
+  line-height: 80rpx;
+}
+/*
+*活动状态
+*/
+   /*
+    *马上参加状态
+    */
+.box_content_button1{
+  width: 26%;
+  height: 65%;
+  margin-left: 60rpx;
+  margin-top: 12rpx;
+  float: left;
+  background-color: #ef974a;
+  border-radius: 30rpx;  
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 50rpx;
+}
+/*
+ *已参加状态
+  */
+.box_content_button2{
+  width: 26%;
+  height: 65%;
+  margin-left: 60rpx;
+  margin-top: 12rpx;
+  float: left;
+  background: transparent;
+  border-radius: 30rpx;  
+  font-size: 24rpx;
+  color: #09bb07;
+  line-height: 50rpx;
+}
+
+
+   /*
+    *已结束状态
+    */
+.box_content .text3{
+  width: 26%;
+  height: 100%;
+  font-size: 24rpx;
+  margin-left:100rpx;
+  color: #000;
+  line-height: 80rpx;
+  text-align: center;
+}
+button::after{
+    border: none;
+}
+
+
+

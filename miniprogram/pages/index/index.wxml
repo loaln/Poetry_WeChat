@@ -1,0 +1,53 @@
+<view class='tip_hid' wx:if="{{choose}}" bindtap='hideModal'> </view>
+<view class='tip_content' wx:if="{{choose}}" animation='{{animationData}}'>
+
+<view class='tip_title'>朝代</view>
+<button id="1" bindtap='butClick'>先秦两汉</button>
+<button id="2" bindtap='butClick'>魏晋南北</button>
+<button id="3" bindtap='butClick'>隋代唐朝</button>
+<button id="4" bindtap='butClick'>五代十国</button>
+<button id="5" bindtap='butClick'>宋代金朝</button>
+<button id="6" bindtap='butClick'>元代</button>
+<button id="7" bindtap='butClick'>明代</button>
+<button id="8" bindtap='butClick'>清朝</button>
+<view class='tip_title'>分类</view>
+<button>古体诗</button>
+<button>近体诗</button>
+<button>词</button>
+<button>曲</button>
+
+</view>
+<view class='search'>
+<image class='img1' src='cloud://poetry-d7007d.706f-poetry-d7007d/index/list.png' bindtap='listClick'></image>
+  <image src='cloud://poetry-d7007d.706f-poetry-d7007d/index/search.png'  bindtap='jumpPageSearch'></image>
+  <text  bindtap='jumpPageSearch'>搜索</text>
+</view>
+
+  <view class='content'>
+
+  <!-- 古风歌曲推荐 -->
+  <view class='rotation-img'>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="2500" circular='true'>
+      <block wx:for="{{imgUrls}}" wx:key="id" wx:key="{{index}}">
+          <swiper-item data-index='{{index}}' bindtap='jumpPage_music'>
+            <image src="{{item}}" class='u-slide-img' mode='aspectFill'  />
+          </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 
+  <!-- class="slide-image" -->
+  <!-- 诗词推荐 -->
+  <view class='poetry'>
+    <block wx:for="{{recommendPoetry}}" wx:for-item="recommendPoetry" wx:key="{{index}}">
+      <view class='poetry-p' bindtap="pageToContent" data-index='{{index}}'>
+        <image class='img-inch1' mode='aspectFill' src='cloud://poetry-d7007d.706f-poetry-d7007d/index/t-{{recommendPoetry.type}}.png'></image>
+        <view class='con-inch2'>
+          <view class='poe'>{{recommendPoetry.title}}</view>
+          <view class='nam'>{{recommendPoetry.writer}}[{{recommendPoetry.dynasty}}]</view>
+          <view class='poe'>{{recommendPoetry.poetryContent}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

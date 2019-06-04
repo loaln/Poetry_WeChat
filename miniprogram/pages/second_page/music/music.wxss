@@ -1,0 +1,32 @@
+page{
+height: 100%;
+width: 100%;
+background-color: #eef9ea;
+}
+.top{
+width: 100%;
+height: 15%;
+color: #5f5f5f;
+text-align: center;
+font-size: 30rpx;
+}
+.mid{
+margin-top: 50rpx;
+width: 100%;
+text-align: center;
+}
+.bot{ 
+margin: auto;
+margin-top: 5rpx;
+background-color: #ffffff;
+width: 68%;
+height: 640rpx;
+border: 5rpx solid #90cdab;
+font-size: 32rpx;
+line-height: 60rpx;
+z-index: 10;
+padding: 50rpx;
+text-align: center;
+color: #5f5f5f;
+white-space: pre-line
+}

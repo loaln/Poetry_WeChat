@@ -1,0 +1,282 @@
+/* miniprogram/pages/mine/mine.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  
+}
+.a{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 128rpx;
+  overflow:hidden;
+  display: block;
+  box-shadow: 0 0 15rpx 5rpx #DEDEDE;
+  margin-left: 4%;
+  margin-top: 10%;
+  float: left;
+}
+.b{
+  float: left;
+  margin-left: 3%;
+  margin-top: 18%;
+  color: #363636;
+}
+.page,.page__bd{
+  width: 100%;
+  height: 80%;
+}
+.page__bd{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+}
+.page__bd__user-bg{
+  width: 100%;
+  height: 35%;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/poetry-bg.png');
+}
+/*
+*背诵收藏在这，声音按钮
+*/
+.page__bd__user-bg .top{
+  width: 100%;
+  height: 20%;
+}
+.page__bd__user-bg .top .content_but_rec{
+  width: 10%;
+  height: 100%;
+  float: left;
+  /* margin-left: 580rpx; */
+  background: transparent;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-recite.png);
+  background-repeat:no-repeat;
+  background-size:60% 62%;
+   background-position: center;
+}
+.page__bd__user-bg .top .content_but_rec1{
+  width: 10%;
+  height: 100%;
+  float: left;
+  /* margin-left: 580rpx; */
+  background: transparent;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-recited.png);
+  background-repeat:no-repeat;
+  background-size:60% 62%;
+   background-position: center;
+}
+.page__bd__user-bg .top .content_but_col{
+  width: 10%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  float: left;
+  background-image: url( http://pr37lb7al.bkt.clouddn.com/poetry-favor.png);
+  background-size:60% 62%;
+  background-repeat:no-repeat;
+  background-position: center; 
+}
+.page__bd__user-bg .top .content_but_col1{
+  width: 10%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  float: left;
+  background-image: url( http://pr37lb7al.bkt.clouddn.com/poetry-favor-clicked.png);
+  background-size:60% 62%;
+  background-repeat:no-repeat;
+  background-position: center; 
+}
+.page__bd__user-bg .content_but_voice{
+  width: 60rpx;
+  height: 60rpx;
+  float:left;
+  margin-top: 8rpx;
+  margin-left: 500rpx;
+  background: transparent;
+  border: none;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-start.png);
+  background-size: 60% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page__bd__user-bg .content_but_voice1{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 500rpx;
+  background: transparent;
+  border: none;
+  float: left;
+  margin-top: 8rpx;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-started.png);
+  background-size: 60% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*
+*作者头像在这里
+*/
+.page__bd__user-bg .left{
+  width:25%;
+  height:60%;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-imgborder.png);
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  margin-left: 50rpx;
+  float: left;
+  text-align: center;
+ 
+}
+.page__bd__user-bg .left image{
+  width: 76%;
+  height: 82%;
+  margin-top: 18rpx;  
+}
+/*
+*作品信息在这里
+*/
+.page__bd__user-bg .right{
+  float: left;
+  margin-left: 50rpx;
+  margin-top: 0rpx;
+  font-size: 30rpx;
+  line-height: 55rpx;
+}
+/*
+*导航条
+*/
+.weui-navbar{
+  width: 96%;
+  padding: 16rpx;
+  border:none;
+  background-color: #fff;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-bgb.png);
+  background-size: 100% 600%;
+}
+.weui-tab__content{
+    padding-top: 40rpx;
+   
+}
+/*
+*这里正文的诗名、诗人、正文字体样式
+*/
+.weui-tab__content .poe{
+  font-size: 34rpx;
+  margin-top: 10rpx;
+   text-align: center;
+}
+.weui-tab__content .name{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+   text-align: center;
+}
+.weui-tab__content .main{
+  font-size: 34rpx;
+  text-align: center;
+}
+.weui-tab__content .mainNote{
+  font-size: 28rpx;
+  width: 80%;
+  padding-top: 80rpx;
+  margin: 0 auto;
+}
+.weui-tab__content .exp{
+  font-size: 34rpx;
+  text-align: left;
+  margin-top: 10rpx;
+  margin-left: 80rpx;
+  margin-right:80rpx;
+}
+/**/
+.navbar__title {
+  display: inline-block;
+  font-size: 15px;
+  max-width: 8em;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.content-tab {
+  position: relative;
+  height: 90%;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-bgb.png);
+  background-size: 100% 120%;
+}
+
+.tab__panel {
+  box-sizing: border-box;
+  height: 85%;
+  padding-top: 50px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  
+}
+.tab__pane2{
+  height: 14%;
+  width: 100%;
+  padding: 0rpx;
+ 
+}
+/*
+*查看笔记添加笔记在这里
+*/
+.tab__pane2 .check{
+  height: 100%;
+  width: 16%;
+  float: left;
+  margin-left: 350rpx;
+    background: transparent;
+   border: none;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-search-note.png);
+  background-repeat:no-repeat;
+  background-size:100% 90%;
+  -moz-background-size:100% 100%;
+  background-position: center;
+}
+.tab__pane2 .add{
+  height: 100%;
+  width:16%;  
+  margin-left: 550rpx;
+   background: transparent;
+   border: none;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-add-note.png);
+  background-repeat:no-repeat;
+  background-size:100% 90%;
+  -moz-background-size:100% 100%;
+  background-position: center;
+}
+
+.weui-navbar__item {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 13px 0;
+  text-align: center;
+  color: #fff;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-click.png);
+  background-repeat:no-repeat;
+  background-size:55% 100%;
+  -moz-background-size:100% 100%;
+  background-position: center;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #fff;
+  background-image: url(http://pr37lb7al.bkt.clouddn.com/poetry-clicked.png);
+  background-repeat:no-repeat;
+  background-size:55% 100%;
+  -moz-background-size:100% 100%;
+  background-position: center;
+}
+button::after {
+  border: none;
+}

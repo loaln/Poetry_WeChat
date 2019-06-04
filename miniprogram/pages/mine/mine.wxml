@@ -1,0 +1,91 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view class="page__bd">
+
+  <!-- user_bg -->
+  <view class='page__bd__user-bg'>
+    <open-data class='page__bd__user-bg__img' type="userAvatarUrl"></open-data>
+    <open-data class='page__bd__user-bg__name' type="userNickName" lang="zh_CN"></open-data>
+  </view>
+
+  <!-- user_content -->
+  <view class="weui-tab">
+  
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+
+    <view class="weui-tab__panel">
+
+      <!-- user_note -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='page__bd__user-note' wx:for="{{note}}" wx:for-item="note" wx:key="" wx:for-index="idx">
+          <view bindtap="pageToContent" data-poetryid='{{note.poetryId}}'>
+            <view class='userNote-data'>{{note.noteTime}}</view>
+            <view class='userNote-title'>{{note.poetryTitle}}</view>
+            <view class='userNote-content'>{{note.content}}</view>
+          </view>
+          <view class='delete' bindtap="deleteNote" data-bindex='{{idx}}' data-id='{{note._id}}'></view>
+        </view>
+      </view>
+
+      <!-- user_recite -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='page__bd__user-recite' wx:for="{{recite}}" wx:for-item="recite" wx:key="id" wx:for-index="idx">
+          <view bindtap="pageToRecite" data-poetryid='{{recite.poetryId}}' data-poetrytime='{{recite.time}}'>
+            <view class='userNote-data'>{{recite.time}}</view>
+            <view class='userNote-title'>
+              <view>
+                <text>{{recite.title}}</text>
+                <text decode='true'>&nbsp;&nbsp;</text>
+                <text>【{{recite.dynasty}}】{{recite.writer}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='delete' bindtap="deleteRecite" data-bindex='{{idx}}' data-id='{{recite._id}}'></view>
+        </view>
+      </view>
+
+      <!-- user-favor -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class='page__bd__user-favor' wx:for="{{favor}}" wx:for-item="favor" wx:key="id" wx:for-index="idx">
+          <view bindtap="pageToContent" data-poetryid='{{favor.poetryId}}'>
+            <view class='userNote-data'>{{favor.time}}</view>
+            <view class='userNote-title'>
+              <view>
+                <text>{{favor.title}}</text>
+                <text decode='true'>&nbsp;&nbsp;</text>
+                <text>【{{favor.dynasty}}】{{favor.writer}}</text>
+              </view>
+            </view>
+            <view class='delete' bindtap="deleteFavor" data-bindex='{{idx}}' data-id='{{favor._id}}'></view>
+          </view>
+        </view>
+      </view>
+
+      <!-- user-task -->
+      <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+        <view class='page__bd__user-task'>
+          <view class='page__bd__user-task__left'></view>
+          <view class='page__bd__user-task__middle'>已开始</view>
+          <view class='page__bd__user-task__right'></view>
+        </view>
+        <view class='page__bd__user-task'>
+          <view class='page__bd__user-task__left'></view>
+          <view class='page__bd__user-task__middle' style='color: orange;'>已报名</view>
+          <view class='page__bd__user-task__right bgOrange'></view>
+        </view>
+        <view class='page__bd__user-task'>
+          <view class='page__bd__user-task__left'></view>
+          <view class='page__bd__user-task__middle' style='color: black;'>已结束</view>
+          <view class='page__bd__user-task__right bgBlack'></view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

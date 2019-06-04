@@ -1,0 +1,142 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  background-color: #eef9ea;
+}
+.search{
+  width: 100%;
+  height: 50rpx;
+ text-align: center;
+ font-size:30rpx;
+ line-height: 20rpx;
+ z-index: 10;
+}
+.search image{
+  margin-top:10rpx;
+  width:55rpx;
+  height: 40rpx;
+}
+.search .img1{
+width:50rpx;
+height: 45rpx;
+position: absolute;
+left: 40rpx
+}
+.search text{
+   top:20rpx;
+   position: absolute;
+   color: #aaa9a5;
+}
+.content{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 800rpx;
+}
+.rotation-img{
+  margin-bottom: 12rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 340rpx;
+}
+swiper{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.poetry{
+  width: 100%;
+}
+.poetry-p{
+  width: 100%;
+  height: 250rpx;
+}
+.img-inch1{
+  margin-left: 10%;
+  width: 80%;
+  height: 52rpx;
+}
+.con-inch2{
+  margin-left: 10%;
+  margin-top: 8rpx;
+  width: 80%;
+  height: 125rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.con-inch2 .poe{
+  margin: auto;
+  font-size: 30rpx;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.con-inch2 .nam{
+  margin: auto;
+  font-size: 24rpx;
+  color: #90cdab;
+}
+/* 搜索框尝试 */
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.tip_hid{
+width:100%;
+height:100%;
+position: fixed;
+top: 0rpx;
+right: 0rpx; 
+background-color: rgba(0, 0, 0, 0.281);
+z-index: 10;
+}
+.tip_content{
+width: 32%;
+height:100%;
+background-color: #fff;
+position: fixed;
+top: 0rpx;
+left: 0rpx;
+padding: 30rpx;
+padding-top: 20rpx;
+padding-bottom: 80rpx;
+z-index: 10;
+font-size: 32rpx;
+line-height: 60rpx;
+border-radius: 20rpx;
+text-align: center;
+}
+.tip_content button{
+height: 75rpx;
+border-radius: 40rpx;
+background-color: #eef9ea;
+font-size: 30rpx;
+border: 0rpx;
+text-align: center;
+background: transparent;
+background-image: url('http://pr37lb7al.bkt.clouddn.com/list_bg.png');
+background-repeat:no-repeat;
+background-size:100% 90%;
+-moz-background-size:100% 100%;
+background-position: center;
+color: #fff;
+}
+.tip_title{
+width: 100%;
+border-bottom: rgba(0, 0, 0, 0.236) solid 1rpx;
+margin-bottom: 20rpx;
+line-height: 100rpx;
+}
+button::after {
+border: none;
+}

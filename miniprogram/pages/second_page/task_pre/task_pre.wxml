@@ -1,0 +1,24 @@
+<view class="top" style='background-image:url({{src}});   background-size:100% 100%;'>
+<view class='text'>{{year}}年{{month}}月{{day}}日</view>
+</view>
+<view class="con">
+<text>副本任务
+      根据系统给出的题目进行
+      连续打卡七天
+      打卡时间为每一天的00:00-23:59
+      逾期则视为当天打卡失败
+
+      关于审核
+      副本采取机器审核
+      对于不符合要求的打卡记录欢迎举报
+      对于作弊行为,副本直接判定失败 
+
+      其他
+      参加副本之后,副本周期内无法退出副本
+
+      奖励相关
+      奖金池：1000积分
+      </text>
+</view>
+<button wx:if="{{but_type==true}}" class='bot' id='{{id}}' bindtap='jumpPage_tasking'>{{bot_text}}</button>
+<button wx:if="{{but_type==false}}" class='bot' style='background-color:#606360;'>已结束</button>

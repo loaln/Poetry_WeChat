@@ -1,0 +1,44 @@
+<view class='top' style='background-image:url({{src}});   background-size:100% 100%;'>
+<view class='text'>{{year}}年{{month}}月{{day}}日</view>
+</view>
+<block wx:if='{{taskType==1}}'>
+<view class='con'><view class='recText'>
+{{reciteText}}</view>
+</view>
+<view class='fot'>
+<button class="dakaResult" wx:if="{{reciteDaka}}" bindtap="jumpTask"> 打卡成功</button>
+<button class="dakaResult" wx:else style='color:rgb(192, 52, 52)' bindtap="jumpTask"> 打卡失败</button>
+</view>
+</block>
+<block wx:if='{{taskType==2}}'>
+<view class='con'style=" height:900rpx;">
+<view class="left">
+正确答案
+<block wx:for="{{poeContent}}" wx:key="id" wx:key="{{index}}" > 
+<view class='ansStr'>
+{{item.poeCon2}}
+</view>
+</block>
+</view>
+<view class="mid">  
+我的答案 
+<block wx:for="{{userAnswer}}" wx:key="id" wx:key="{{index}}" > 
+<view class='ansStr'>
+{{item}}
+</view>
+</block>
+</view>
+<view class="right">  
+结果
+<block wx:for="{{ansCheck}}" wx:key="id" wx:key="{{index}}" > 
+<view class='ansStr'>
+{{item}}
+</view>
+</block>
+</view>
+</view>
+<view class='fot'  >
+<button bindtap="jumpTask" class="dakaResult" wx:if="{{tianDaka}}" >正确数量：{{rightNumber}}  打卡成功</button>
+<button bindtap="jumpTask" class="dakaResult" wx:else style='color:rgb(192, 52, 52)'>正确数量：{{rightNumber}}  打卡失败
+</button></view>
+</block>

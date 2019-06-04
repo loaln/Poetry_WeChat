@@ -1,0 +1,62 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/content/content",
+    "pages/task/task",
+    "pages/second_page/task_ing/task_ing",
+    "pages/second_page/task_ed/task_ed",
+    "pages/mine/mine",
+    "pages/recite/recite",
+    "pages/second_page/task_pre/task_pre",
+    "pages/second_page/list/list",
+    "pages/second_page/music/music",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/second_page/note/note",
+    "pages/second_page/index_search/index_search"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "诗乐之",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/task/task",
+        "text": "副本",
+        "iconPath": "images/icon-task.png",
+        "selectedIconPath": "images/icon-task.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon-index.png",
+        "selectedIconPath": "images/icon-index.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/icon-mine.png",
+        "selectedIconPath": "images/icon-mine.png"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.0.6",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

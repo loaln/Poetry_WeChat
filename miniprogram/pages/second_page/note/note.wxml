@@ -1,0 +1,29 @@
+<view class='content'>
+<!-- 第一部分 --> 
+    <view class='top'>
+      <!-- 日期 --> 
+      <view class='date'> 
+      {{noteTime}}
+      </view>
+      <!-- 发表按钮 --> 
+      <button class='edit' bindtap="editClick" hidden='{{edit != false}}'>  </button>
+    </view>
+
+<!-- 第二部分 --> 
+    <view class='mid'>
+     <view class='note'>
+     <scroll-view scroll-y="true" style="height: 100%;" >
+     <!-- 用户笔记 --> 
+     <view hidden='{{edit !=false}}'>
+     <text>{{noteContentEdited}}</text>
+    </view>
+     <!-- 点击编辑按钮后 -->
+    <textarea hidden='{{edit !=true}}' placeholder='请输入文字...' value='{{noteContentEditing}}' bindinput='formName'></textarea>
+</scroll-view>
+     </view>
+
+     <!-- 发表按钮 --> 
+     <button class='publish_button' bindtap='publishClick' hidden='{{edit != true}}'>发表</button>
+     
+    </view>
+  </view>

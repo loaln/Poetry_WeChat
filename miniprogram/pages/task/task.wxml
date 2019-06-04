@@ -1,0 +1,44 @@
+<!--miniprogram/pages/task/task.wxml-->
+<view class='bg'>
+<!--第一个活动-->
+  <view class='box_img' >
+  <image src='cloud://poetry-d7007d.706f-poetry-d7007d/task/beisong.png'></image>
+  </view>
+  <view class='box_content'>
+    <!-- <view class='box_content_text'>活动时间：{{month}}月{{day}}日-{{month2}}月{{day2}}日</view> -->
+     <view class='box_content_text'>诗词背诵打卡挑战</view>
+    <!-- 当recite_Type==0为未参加状态，class=text1，id=2，跳转到task_pre，传入app.taskType=1
+    当recite_Type==1为已参加状态，class=text2，id=5，跳转到task_pre，传入app.taskType=4 -->    
+    <button class="{{recite_Type==0 ? 'box_content_button1' : 'box_content_button2'}}" id="{{recite_Type==0 ? 1 : 4}}" bindtap="jumpPage_task">
+    <text wx:if="{{recite_Type==0}}" class="text1">{{recite1}}</text>
+    <text wx:if="{{recite_Type==1}}" class="text2">{{recite2}}</text>
+    </button>
+  </view>
+
+<!--第二个活动-->
+  <view class='box_img' >
+   <image src='cloud://poetry-d7007d.706f-poetry-d7007d/task/tiankong.png'></image>
+  </view>
+  <view class='box_content'>
+    <!-- <view class='box_content_text'>活动时间：{{month}}月{{day}}日-{{month2}}月{{day2}}日</view> -->
+   <view class='box_content_text'>诗词填空打卡挑战</view>
+    <!-- 当tian_Type==0为未参加状态，class=text1，id=2，跳转到task_pre，传入app.taskType=2
+    当tian_Type==1为已参加状态，class=text2，id=5，跳转到task_pre，传入app.taskType=5 -->
+    <button class="{{tian_Type==0 ? 'box_content_button1' : 'box_content_button2'}}" id="{{tian_Type==0 ? 2 : 5}}" bindtap="jumpPage_task">
+    <text  wx:if="{{tian_Type==0}}" class="text1" >{{tian1}}</text>
+    <text  wx:if="{{tian_Type==1}}"class="text2" >{{tian2}}</text>
+    </button>
+  </view>
+
+<!--第三个活动-->
+  <view class='box_img'>
+   <image src='cloud://poetry-d7007d.706f-poetry-d7007d/task/moxie.png'></image>
+  </view>
+  <view class='box_content'>
+    <view class='box_content_text'>诗词默写打卡挑战</view>
+
+    <!--id=3，跳转到task_pre，传入app.taskType=3 -->    
+    <text class='text3' id='3'bindtap="jumpPage_task">已结束</text>
+  </view>
+
+</view>

@@ -1,0 +1,30 @@
+<view class='top'>
+ <text decode="{{true}}">
+ 古风歌曲推荐 
+ {{title}}
+ —————————————</text>
+</view>
+<view class='mid'>
+<audio
+  poster="{{poster}}"
+  name="{{name}}"
+  author="{{author}}"
+  src="{{src}}"
+  id="myAudio"
+  controls
+  loop
+></audio>
+</view>
+<view class='bot'>
+ <scroll-view
+    scroll-y
+    style="height: 100%;"
+
+  >
+  <text decode="{{true}}">  
+  {{lyric}} 
+  </text>
+  </scroll-view>
+</view>
+
+

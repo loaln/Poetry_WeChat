@@ -1,0 +1,195 @@
+Page{
+width: 100%;
+height: 100%;
+ background-image: url('http://pr37lb7al.bkt.clouddn.com/second-note-bg.png '); 
+   background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  position: fixed;
+}
+.content{
+  width: 90%;
+  height:90%;
+  margin:auto;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/second-note-borderbg.png '); 
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+ z-index: 1
+}
+/*
+*第一部分
+*/
+.content .top{
+  width: 80%;
+  height: 100rpx;  
+  padding-left: 60rpx;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+
+}
+  /*
+  *日期
+  */
+.content .top .date{
+  width:80%;
+  font-size: 32rpx;
+  margin-top: 45rpx;
+  float: left;
+  color:#90cdab;
+} 
+  /*
+  *编辑按钮
+  */
+.content .top .back{
+  width: 50rpx;
+  height: 50rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_back.png');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  border: none;
+  position: absolute;
+  top:90rpx;
+  left:83%;
+  }
+/*
+*第二部分
+*/
+
+
+.content .mid {
+  width: 90%;
+  height: 60%;
+  margin: auto;
+  margin-top: 35rpx;
+  font-size: 36rpx;
+  line-height: 60rpx;
+  z-index: 10;
+  text-align: center;
+  
+}
+.content .mid .sub{
+  width: 80%;
+  height:80%;
+  margin: auto;
+  margin-top:20rpx; 
+  text-align: left;
+  font-size: 32rpx;
+}
+.content .bot{
+  width: 90%;
+  height: 20%;
+  margin: auto;
+  margin-top: 35rpx;
+  text-align: center;
+ 
+}
+ .content .bot .ing{
+   width: 100%;
+   height: 50rpx;
+   text-align: center;
+   font-size: 28rpx;
+
+ }
+  .content .bot .ing image{
+   width: 20rpx;
+   height: 20rpx;
+   margin-right: 15rpx;
+
+ }
+  /*
+  *发表按钮
+  */
+.content .bot  .tip_button{
+  width:15%;
+  height: 70rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_tip.png');
+  background-repeat:no-repeat;
+  background-size:80% 100%;
+  -moz-background-size:100% 100%;
+  border: none;
+  float: left;
+  margin-left: 100rpx;
+  margin-top: 70rpx;
+
+}
+.content .bot  .record_button{
+  width:25%;
+  height: 180rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_soundRecord.png');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  border: none;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.content .bot  .record_button1{
+  width:25%;
+  height: 180rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_soundRecord_ed.png');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  border: none;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.content .bot  .finish_button{
+  width: 15%;
+  height: 70rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_accom.png');
+  background-repeat:no-repeat;
+  background-size:80% 100%;
+  -moz-background-size:100% 100%;
+  border: none;
+  margin-left: 420rpx;
+  margin-top: 70rpx;
+
+}
+
+button::after {
+  border: none;
+}
+/*
+*底部弹窗
+*/
+
+.tip_hid{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0rpx; 
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.tip_content{
+  width: 79%;
+  height:60%;
+  background-color: #fff;
+  position: absolute;
+  bottom:  -50rpx;
+  padding: 80rpx;
+  padding-top: 20rpx;
+  padding-bottom: 120rpx;
+  z-index: 10;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.tip_title{
+  width: 100%;
+  border-bottom:  rgba(0, 0, 0, 0.236) solid 1rpx;
+  margin-bottom: 50rpx;
+  line-height: 100rpx;
+}

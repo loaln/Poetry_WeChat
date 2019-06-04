@@ -1,0 +1,68 @@
+<view class="page">
+
+<!--wxml第一部分-->
+<view class='top'>
+  <view class='page_search'>
+    <!--wxml输入框-->
+    <input class='page_search_input' placeholder="请输入关键字" placeholder-style="color:##777777 " type='text' name='input_search' bindinput = 'formSearch'>
+    </input>
+
+    <!--wxml下拉框-->
+    <view class='select_box'>
+      <view class='select' catchtap='selectTap'>
+        <text class='select_text' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{selectData[index]}}</text>
+      </view>
+      <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+        <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap' decode="{{true}}">
+        &nbsp;&nbsp;&nbsp;{{item}}
+        </text>
+      </view>
+    </view>
+
+    <!--wxml搜索按钮-->
+    <button class='page_search_button' type='submit' catchtap='gotoresult' id='button_search'>
+    </button>
+  </view>
+</view>
+<!--wxml第二部分-->
+  <view class='search_content' hidden="{{contentSelectShow}}">
+    <block wx:for="{{searchContent}}" wx:key="{{index}}" wx:for-item="searchContent">
+      <view class='search_content_bg' bindtap="pageToContent" data-index='{{index}}'>
+      <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      《{{searchContent.title}}》/{{searchContent.dynasty}}/{{searchContent.writer}}
+      </view>
+    </block>
+  </view>
+
+
+<!--wxml第三部分-->
+  <view class='page_content' hidden="{{!contentSelectShow}}">
+    <!--wxml静态文字-->
+    <view class='page_content_recommendation'>
+      <view class='text'>大家都在看</view>
+    </view>
+
+    <!--wxml推荐文字-->
+    <view class='page_content_rec' bindtap="jumpPage1">
+      <view class='textleft'>{{recommendation[0][0]}}</view>
+      <view class='textright'>
+        <text decode="{{true}}">{{recommendation[0][1]}}&nbsp;/&nbsp;{{recommendation[0][2]}}</text>
+      </view>
+    </view>
+
+    <view class='page_content_rec' bindtap="jumpPage2">
+      <view class='textleft'>{{recommendation[1][0]}}</view>
+      <view class='textright'>
+        <text decode="{{true}}">{{recommendation[1][1]}}&nbsp;/&nbsp;{{recommendation[1][2]}}</text>
+      </view>
+    </view>
+
+    <view class='page_content_rec' bindtap="jumpPage3">
+      <view class='textleft'>{{recommendation[2][0]}}</view>
+      <view class='textright'>
+        <text decode="{{true}}">{{recommendation[2][1]}}&nbsp;/&nbsp;{{recommendation[2][2]}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>

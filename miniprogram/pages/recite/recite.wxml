@@ -1,0 +1,40 @@
+<!--<button type='default' bindtouchstart='startrecorderHandel' bindtouchend="sendrecorderHandel">开始8录音</button>
+ <view> 你说的话是: <view> {{msg}} </view> </view>-->
+<view class='content'>
+  <!-- 第一部分 -->
+  <view class='top'>
+    <!-- 日期 -->
+    <view class='date'>{{time}}</view>
+    <!-- 发表按钮 -->
+    <button class='back' bindtap="backClick"></button>
+  </view>
+
+  <!-- 第二部分 -->
+  <view class='mid'>
+    <!-- 用户笔记 -->
+    <view>{{poetryTitle}}</view>
+    <scroll-view scroll-y style="height: 95%;">
+      <text> {{reciteResult}}</text>
+    </scroll-view>
+  </view>
+  <view class='bot'>
+    <view class='ing' hidden='{{sound!=false}}'></view>
+
+    <view class='ing' hidden='{{sound!=true}}'>
+      <image src='cloud://poetry-d7007d.706f-poetry-d7007d/icon/recite_ing.png'></image>正在背诵</view>
+
+    <!-- 按钮 -->
+    <button class='tip_button' bindtap='tipClick'></button>
+    <button bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" class="{{sound==false ? 'record_button' : 'record_button1'}}"></button>
+    <button class='finish_button' bindtap='finishClick'></button>
+  </view>
+
+  <!--隐藏区域  -->
+</view>
+<view class='tip_hid' wx:if="{{choose}}" bindtap='hideModal'> </view>
+<view class='tip_content' wx:if="{{choose}}" animation='{{animationData}}'>
+  <view class='tip_title'>提示</view>
+  <scroll-view scroll-y="true" style="height: 100%;">
+  <text decode="{{true}}">{{poetryContent}}</text>
+  </scroll-view>
+</view>

@@ -1,0 +1,42 @@
+<view class="top" style='background-image:url({{src}});   background-size:100% 100%;'>
+<view class='text'>{{year}}年{{month}}月{{day}}日</view>
+</view>
+<view class="con">
+   <view class='date'> 
+    {{year}}年{{month}}月{{day}}日
+   </view>
+   <button wx:if="{{taskType==1}}"class='back' bindtap="backClick" ></button>
+    <button class='tip_button' bindtap='tipClick'></button>    
+   <block wx:if="{{taskType==1}}" style="margin:50rpx;">
+   <text style='margin-left:200rpx; color:#90cdab;'>{{title}}</text>
+   <view class='recite'>
+   <scroll-view scroll-y  style="height: 100%;" >
+    {{reciteResult}}
+  </scroll-view>
+  </view>
+  <view class='record'>
+   <!-- 按钮 --> 
+     <button  bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" class="{{sound==false ? 'record_button' : 'record_button1'}}" ></button>
+  </view>
+   </block>
+   <block wx:if="{{taskType==2}}" wx:for="{{poeContent}}" wx:key="id" wx:key="{{index}}">
+   <view class='tianText1'>{{item.poeCon1}}</view>
+   <input class='tianText2' bindinput='strInput{{index}}'></input>
+  </block>
+  </view>
+<button class='bot' id='{{id}}' bindtap='dakaClick'>打卡</button>
+
+<!--隐藏区域  -->
+  <view class='tip_hid' wx:if="{{choose}}" bindtap='hideModal'> </view>
+<view class='tip_content' wx:if="{{choose}}" animation='{{animationData}}'>
+<view class='tip_title'>提示</view>
+<scroll-view scroll-y="true" style="height: 100%;" >
+<text wx:if="{{taskType==1}}" decode="{{true}}">{{content}} 
+</text>
+<block  wx:if="{{taskType==2}}" wx:for="{{poeContent}}" wx:key="id" wx:key="{{index}}">
+<text decode="{{true}}">{{item.poeCon}}\n
+</text>
+</block>
+</scroll-view>
+</view>
+ 

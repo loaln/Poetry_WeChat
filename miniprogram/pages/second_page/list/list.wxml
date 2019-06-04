@@ -1,0 +1,12 @@
+<view class='search' bindtap='jumpPageSearch'>
+  <image src='cloud://poetry-d7007d.706f-poetry-d7007d/index/search.png'></image>
+  <text>搜索</text>
+</view>
+<view class="top">{{ListTitle}}</view>
+<view class='content'>
+
+<block wx:for="{{List}}" wx:key="id" wx:key="{{index}}" > 
+<view class='list'>{{item}}</view>
+ </block>
+
+</view>

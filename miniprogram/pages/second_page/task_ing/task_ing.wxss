@@ -1,0 +1,159 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #eef9ea;
+    font-size: 32rpx;
+    position: fixed;
+
+}
+.top{
+ width: 100%;
+ height: 330rpx;
+ margin: auto;
+ margin-top:0rpx;
+ text-align: center;
+ 
+}
+
+.top .text{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  margin:auto;
+  position: absolute;
+  top:245rpx;
+  left: 0rpx;
+  font-size: 28rpx;
+}
+.con{
+ width: 85%;
+ height: 62%;
+ background-image: url(https://706f-poetry-d7007d-1259167935.tcb.qcloud.la/task/text_bg_task.png?sign=a690f52507daa72e3d8a11455715d98f&t=1558872670g);
+   background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+margin: auto ;
+ margin-top:15rpx;
+ padding-top: 30rpx;
+ padding-left: 50rpx;
+ text-align: left;
+ font-size: 32rpx;
+  }
+.bot{
+ width: 40%;
+ height: 50rpx;
+ background-color: #09bb07;
+ margin: auto;
+ margin-top:20rpx ;
+  margin-bottom:30rpx ;
+ color: #fff;
+ border-radius: 30rpx;
+ line-height: 50rpx;
+}
+.con .date{
+  width:62%;
+  margin-top: 35rpx;
+  margin-left: 65rpx;
+  float: left;
+  color:#90cdab;
+} 
+.tianText1{
+  height: 50rpx;
+  float: left;
+  line-height: 50rpx;
+}
+.tianText2{
+   width:245rpx;
+  height: 50rpx;
+  border-bottom: 1rpx solid #000;
+
+}
+.recite{
+  height: 60%;
+  width: 82%;
+  margin-left: 40rpx;
+}
+.record{
+  height: 15%;
+  width: 82%;
+  margin-left: 40rpx;
+   margin-top: 10rpx;
+}
+.tip_button{
+  width:70rpx;
+  height: 50rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_tip.png');
+  background-repeat:no-repeat;
+  background-size:55% 85%;
+  -moz-background-size:100% 100%;
+  margin-top: 40rpx;
+
+}
+.back{
+  width: 70rpx;
+  height: 50rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_back.png');
+  background-repeat:no-repeat;
+  background-size:55% 85%;
+  -moz-background-size:100% 100%;
+  float: left;
+   margin-top: 40rpx;
+  }
+.record_button{
+  width:25%;
+  height: 180rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_soundRecord.png');
+  background-repeat:no-repeat;
+  background-size:100% 80%;
+  -moz-background-size:100% 100%;
+margin: auto;
+}
+ .record_button1{
+  width:25%;
+  height: 180rpx;
+  background: transparent;
+  background-image: url('http://pr37lb7al.bkt.clouddn.com/recite_soundRecord_ed.png');
+  background-repeat:no-repeat;
+  background-size:100% 80%;
+  -moz-background-size:100% 100%;
+ margin: auto;
+}
+button::after{
+  border: none;
+}
+/*
+*底部弹窗
+*/
+
+.tip_hid{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0rpx; 
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.tip_content{
+  width: 79%;
+  height:60%;
+  background-color: #fff;
+  position: absolute;
+  bottom:  -50rpx;
+  padding: 80rpx;
+  padding-top: 20rpx;
+  padding-bottom: 120rpx;
+  z-index: 10;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+ text-align: left;
+}
+.tip_title{
+  width: 100%;
+  border-bottom:  rgba(0, 0, 0, 0.236) solid 1rpx;
+  margin-bottom: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
